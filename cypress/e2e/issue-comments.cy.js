@@ -11,7 +11,7 @@ describe("Issue comments creating, editing and deleting", () => {
 
   const getIssueDetailsModal = () => cy.get('[data-testid="modal:issue-details"]');
 
-  it.skip("Should create a comment successfully", () => {
+  it("Should create a comment successfully", () => {
     const comment = "TEST_COMMENT";
 
     getIssueDetailsModal().within(() => {
@@ -26,7 +26,7 @@ describe("Issue comments creating, editing and deleting", () => {
     });
   });
 
-  it.skip("Should edit a comment successfully", () => {
+  it("Should edit a comment successfully", () => {
     const previousComment = "An old silent pond...";
     const comment = "TEST_COMMENT_EDITED";
 
@@ -44,7 +44,7 @@ describe("Issue comments creating, editing and deleting", () => {
     });
   });
 
-  it.skip("Should delete a comment successfully", () => {
+  it("Should delete a comment successfully", () => {
     getIssueDetailsModal().find('[data-testid="issue-comment"]').contains("Delete").click();
 
     cy.get('[data-testid="modal:confirm"]')
